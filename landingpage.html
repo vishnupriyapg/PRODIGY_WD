@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DreamSpace - Creative Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #121212;
+      color: #fff;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: transparent;
+      transition: background-color 0.4s, box-shadow 0.3s;
+      z-index: 1000;
+    }
+    header.scrolled {
+      background-color: #1e1e1e;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+    .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #00fff7;
+    }
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #00fff7;
+    }
+    .hero {
+      height: 100vh;
+      background: url('https://source.unsplash.com/1600x900/?technology,abstract') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero h1 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #00fff7, #ff00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 1.3em;
+      color: #ccc;
+      max-width: 600px;
+    }
+    .hero .cta-btns {
+      margin-top: 30px;
+    }
+    .cta-btns a {
+      background: #00fff7;
+      color: #000;
+      padding: 12px 25px;
+      margin: 10px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .cta-btns a:hover {
+      background: #00cccc;
+    }
+    .section {
+      padding: 100px 60px;
+      background-color: #1e1e1e;
+    }
+    .section:nth-child(even) {
+      background-color: #292929;
+    }
+    .section h2 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      color: #00fff7;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .feature {
+      background: #333;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .feature img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+    .portfolio-item {
+      margin-bottom: 40px;
+    }
+    .portfolio-item img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .testimonial {
+      margin-top: 30px;
+      font-style: italic;
+      color: #ccc;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    form input, form textarea {
+      margin-bottom: 15px;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    form button {
+      background-color: #00fff7;
+      color: #000;
+      font-weight: bold;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      padding: 40px;
+      text-align: center;
+      background-color: #111;
+      color: #666;
+    }
+    @media (max-width: 768px) {
+      header { padding: 15px 30px; }
+      nav a { margin-left: 15px; }
+      .hero h1 { font-size: 2.2em; }
+      .hero p { font-size: 1em; }
+      .section { padding: 60px 30px; }
+    }
+  </style>
+</head>
+<body>
+  <header id="navbar">
+    <div class="logo">DreamSpace</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Design. Innovate. Inspire.</h1>
+    <p>Welcome to DreamSpace — where creativity meets technology. We build immersive digital experiences that captivate and convert.</p>
+    <div class="cta-btns">
+      <a href="#features">Learn More</a>
+      <a href="#contact">Get Started</a>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <h2>Key Features</h2>
+    <div class="features-grid">
+      <div class="feature">
+        <img src="https://img.icons8.com/color/96/code--v1.png" alt="Code Icon">
+        <h3>Modern Tech</h3>
+        <p>We use the latest frameworks and technologies to deliver top performance.</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/color/96/combo-chart--v1.png" alt="Analytics Icon">
+        <h3>Data-Driven</h3>
+        <p>Our solutions are backed by insights and analytics to drive results.</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/color/96/thumb-up--v1.png" alt="User Friendly Icon">
+        <h3>User-Friendly</h3>
+        <p>Designs that focus on intuitive interfaces and seamless experiences.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="portfolio">
+    <h2>Our Work</h2>
+    <div class="portfolio-item">
+      <img src="https://source.unsplash.com/800x500/?website,design" alt="Project 1">
+      <p>Creative website design for a tech startup, focusing on branding and usability.</p>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://source.unsplash.com/800x500/?app,development" alt="Project 2">
+      <p>Mobile-first web app optimized for performance and scalability.</p>
+    </div>
+    <div class="testimonial">
+      "DreamSpace transformed our online presence. The design is stunning, and performance is top-notch!" - Happy Client
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="tel" placeholder="Phone Number">
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="text-align:center; margin-top:20px;">Email: contact@dreamspace.com | Phone: +123 456 7890</p>
+    <p style="text-align:center;">Follow us:
+      <a href="#" style="color:#00fff7; margin:0 10px;">Instagram</a>
+      <a href="#" style="color:#00fff7; margin:0 10px;">LinkedIn</a>
+      <a href="#" style="color:#00fff7; margin:0 10px;">Twitter</a>
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 DreamSpace. All rights reserved.
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>
